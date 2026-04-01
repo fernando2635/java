@@ -1,20 +1,16 @@
+package Implementacion;
+
 public class Empleado {
     private String nombre;
-    private String identificacion;
     private double salario;
 
-    public Empleado(String nombre, String identificacion, double salario) {
+    public Empleado(String nombre, double salario) {
         this.nombre = nombre;
-        this.identificacion = identificacion;
         this.salario = salario;
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String getIdentificacion() {
-        return identificacion;
     }
 
     public double getSalario() {
@@ -25,11 +21,12 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
-    }
-
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Salario: " + salario);
     }
 }
